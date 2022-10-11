@@ -50,23 +50,25 @@ Sub_Mountain_small:
 #### Models/OriginalModel
   Mask_rcnn_coco.h5:
    * A pretrained model, built upon to train a model to identify Mountains
-#### Models/ResultingModels
-  Mask_rcnn_model.001-2.025847.h5: (not provided)
-   * Trained model after 1 epoch
-  
-  Mask_rcnn_model.002-1.948599.h5:(not provided)
-   * Trained model after 2 epochs
-  
-  Mask_rcnn_model.004-1.862559.h5:(not provided)
-   * Trained model after 4 epochs
-  
-  Mask_rcnn_model.005-1.854457.h5:(not provided)
-   * Trained model after 5 epochs
-  
-  Mask_rcnn_model.006-1.754546.h5: (supplied)
-   * Trained model after 6 epochs
-*Please note, the largest files within this ZIpfile would be the models (each vary around 175,000KB)
+   * Obtain this model from [here](https://towardsdatascience.com/custom-instance-segmentation-training-with-7-lines-of-code-ff340851e99b). You will find the link within the  "FINAL STEP"
+   * Please note, the models were to large to add directly to Git Hub (each vary around 175,000KB)
+## Resources
 
+Throughout this Project I collected links to helpful documents and files. Some used more readily than others: Here is a list of links I found relevant to learning and using PixeLIb to train the mask_rcnn_coco.h5 model:
+
+Packages: 
+* [PixelLib on GitHub](https://github.com/ayoolaolafenwa/PixelLib)
+* [How to install and do Annotation of Images using Labelme (Easy, Simple & Flexible)](https://www.youtube.com/watch?v=XKJc2YT5-es)
+* [LabelMe Annotation Tool](https://github.com/CSAILVision/LabelMeAnnotationTool)
+    * Tool used to label mountain images with corresponding json files
+    
+Model: 
+* [MaskR-CNN](https://github.com/matterport/Mask_RCNN)
+    * helpful information about the model and deep learning used to train instance segmentation within PixelLib
+* [Deep Residual Networks (ResNet, ResNet50) – Guide in 2021](https://viso.ai/deep-learning/resnet-residual-neural-network/)
+    * This was a helpful document that explains the structure and architecture of the rcnn model (within PixelLIb can be either 'resnet50' or 'restnet101')
+* [COCO model](https://arxiv.org/pdf/1405.0312.pdf) 
+    * the coco model is a pretrained model that can identify 80 things, and is continually the backbone to furture catergorical traing, this document provides and interduction to the COCO model (used within PixelLib)
 ### Citations:
 Mountain Images were provided by [MIT Computer Science and Artificial Intelligence Laboratory](http://places.csail.mit.edu/) "Places" dataset. 
 
