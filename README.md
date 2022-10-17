@@ -8,15 +8,15 @@ The Goal of this project was to train a CNN model to recognize Mountains from im
 
 This repository contains data, files, and models for this project Mountain-Image-Classification (an attempt at training a model to segment mountains from an image). 
 
-The folder for this project "MountainIDProjectSubmission", contains three folders, "MSI_Files", "JupNotebooks_PCenv", "Data". Within the "MSI_Files" folder are the files used to run jobs via the [Minnesota Supercomputing Insitute (MSI)](https://www.msi.umn.edu/) portal ("SchedulingJob_50.sh" and "Mountain_model_training_MSI_50.py"). Operating in MSI, involved making a python environment with additional python packages beyond those included in conda (`imgaug`, `tensorflow`, and `pixellib`). In addition to downloading packages I also had to install several dependencies for older versions (`tensorflow==1.5.0`, `skimage == 0.16.2`, and `keras==2.1.5`) to avoid certain errors. "slurm-9072506.out" is one example (1 epoch) of results from running the files in MSI. 
+This project contains three folders, "MSI_Files", "JupNotebooks_PCenv", "Sub_Mountain_small". Within the "MSI_Files" folder are the files used to run jobs via the [Minnesota Supercomputing Insitute (MSI)](https://www.msi.umn.edu/) portal ("SchedulingJob_50.sh" and "Mountain_model_training_MSI_50.py"). Operating in MSI, involved making a python environment with additional python packages beyond those included in conda (`imgaug`, `tensorflow`, and `pixellib`). In addition to downloading packages I also had to install several dependencies for older versions (`tensorflow==1.5.0`, `skimage == 0.16.2`, and `keras==2.1.5`) to avoid certain errors. "slurm-9072506.out" is one example (1 epoch) of results from running the files in MSI. 
 
 In "JupNotebooks_PCenv" you will find the Jupyter Notebooks used to run the code on my personal PC environment (this too required downloading the previously  mentioned packages when operating in a MSI environment). It should be noted that MSI was utilized solely to train models, while the Jupyter Notebooks executed on my personal PC explored evaluating the outcomes (visualizations and MAP calculations) in addition to training. 
 
-Lastly, the "Data" folder contains the image dataset used to train and test the models on classifying mountains (309 train images and 105 test images all with corresponding json files), while the "Models" folder contains the model adapted (mask_rcnn_coco.h5) and all resulting models from my training ("Resulting Models", each model was saved after each epoch involved in training it). 
+Lastly, the "Sub_Mountain_small" folder contains the image dataset used to train and test the models on classifying mountains (309 train images and 105 test images all with corresponding json files). Note, the resulting models (saved as h5 files) could not be shared on GitHub since their file size is too large. You can find the initial model (mask_rcnn_coco.h5) through this [article](https://towardsdatascience.com/custom-instance-segmentation-training-with-7-lines-of-code-ff340851e99b) and all resulting models from my training ("Resulting Models", each model was saved after each epoch involved in training it). 
 
 ### Note before running any file. 
 
-If you desire to run any files, you will need to adapt the Path to current locations (such as the path to access the "Sub_Mountain_USEME" dataset or the "mask_rcnn_coco.h5" model used to train the data. 
+If you desire to run any files, you will need to adapt the Path to current locations (such as the path to access the "Sub_Mountain_small" dataset or the "mask_rcnn_coco.h5" model used to train the data. 
 
 If you do plan to rerun any notebooks, please note that the cell for training the model will take hours to execute (this has been an ongoing problem, trying to reduce the training time to more reasonable time constraints). 
 
@@ -43,8 +43,8 @@ Mountain_training_test2_colabToPc-OG.ipynb:
 
 Mountain_training_test2_colabToPc.ipynb:
   * Contains code that trains, elvaluates, and visualizes output (after each trained model)
-### Data/
-Sub_Mountain_small:
+
+### Sub_Mountain_small:
   * A sample of the original data used to train the model.
   * Contains 18 images (in test and train folders)
 #### Models/OriginalModel
