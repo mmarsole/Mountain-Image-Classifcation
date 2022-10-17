@@ -1,4 +1,4 @@
-# Mountain-Image-Classifcation
+# Mountain-Image-Classification
 
 ## Simple summary: 
 
