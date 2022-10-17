@@ -2,7 +2,7 @@
 
 ## Simple summary: 
 
-The Goal of this project was to train a CNN model to recognitize Mountains from imagery at the pixel level (segmantic segmentation).
+The Goal of this project was to train a CNN model to recognize Mountains from imagery at the pixel level (segmantic segmentation).
 
 ## File summary
 
